@@ -1,0 +1,1191 @@
+<!DOCTYPE html />
+<?xml encoding="utf-8" ?>
+<html>
+<head>
+    <title>Powerpuff Girls: Defenders of Townsville - Savegame Editor</title>
+    <meta name="author" value="Markus Birth" />
+    <script type="text/javascript" src="jquery-latest.min.js"></script>
+    <script type="text/javascript" src="PPGEditor.js"></script>
+    <style type="text/css">
+        textarea {
+            width: 80%;
+            height: 40em;
+            font-size: 6pt;
+        }
+
+        input[type=number] {
+            width: 4em;
+        }
+
+        input[data-type=L] {
+            background-color: #eef;
+            width: 5em;
+        }
+
+        input[data-type=F] {
+            width: 8em;
+        }
+
+        #savegames {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        #savegames th, #savegames td {
+            border-top: 1px dotted black;
+            border-bottom: 1px dotted black;
+        }
+
+        #savegames th:nth-child(1), #savegames td:nth-child(1) {
+            background-color: #eee;
+        }
+
+        #savegames th:nth-child(2), #savegames td:nth-child(2) {
+            background-color: #fee;
+        }
+
+        #savegames th:nth-child(3), #savegames td:nth-child(3) {
+            background-color: #efe;
+        }
+
+        #savegames th:nth-child(4), #savegames td:nth-child(4) {
+            background-color: #eef;
+        }
+    </style>
+</head>
+<body>
+<h1>The Powerpuff Girls: Defenders of Townsville — Savegame Editor</h1>
+Paste your savegame from <tt>/storage/emulated/0/Android/data/com.turner.ppg/files/PPGSaveData.txt</tt> below:
+<textarea id="file" name="file">
+S1NS:1:I;S0R52F:0:I;S1PB4:0:I;S1R31F:0:I;S0R16U0:9:I;S2R10F:0:I;S1R120F:0:I;S0R16U3:6:I;S2R29F:0:I;S0R79F:0:I;S0R121F:0:I;S0R51F:0:I;S2R65F:0:I;OXPX:0:I;S0R17F:53:I;S0R53F:0:I;S1R32F:0:I;S2R11F:0:I;S0R47U0:0:I;S0R122F:0:I;S2R66F:0:I;S0R18F:37:I;S1Q2:F:B;S2R40F:0:I;S0R54F:0:I;S0R22U2:3:I;S1R33F:0:I;OXRI:0:I;S1R122F:0:I;S0R90F:0:I;S0RD:495:I;S0R123F:0:I;S2R67F:0:I;S0R19F:45:I;S0R55F:0:I;S1R34F:0:I;S2R13F:0:I;S0PB0:2:I;S0PB1:0:I;S0R91F:0:I;S0PB3:0:I;S0PB4:0:I;S1R70F:0:I;S1RD:0:I;S1R89F:0:I;S0R26U1:2:I;S2R68F:0:I;S2DL:1:I;S1RN:0:I;S2R36F:0:I;S2PU3:0:I;S0R56F:0:I;S1R35F:0:I;S0R14U2:4:I;S0PBM:1:I;S2R14F:0:I;S1R124F:0:I;OCF:F:B;OCG:T:B;S2R20F:0:I;S1R71F:0:I;S0R19U4:24:I;S2R50F:0:I;OCOX1:-468.8889:F;OCOX2:398.8889:F;OCOX3:458.8889:F;OCS:1:I;S0R11U0:3:I;S0PCB:9:I;S2R37F:0:I;S0R4U0:5:I;S2R43F:0:I;S1PCH:0:I;S1R36F:0:I;S2R15F:0:I;S1R125F:0:I;S0PCP:0:I;S0R93F:0:I;S1R72F:0:I;S0R9U6:26:I;HP10:F:B;S2R51F:0:I;OCOY1:-7.525085:F;OCOY2:242.4749:F;OCOY3:72.47491:F;S0R28U0:21:I;S0R42U0:8:I;S0R42U1:3:I;S0R42U2:2:I;S0R58F:0:I;S2R44F:0:I;S1R37F:0:I;S2R16F:0:I;S1R126F:0:I;S0R94F:0:I;S1R73F:0:I;S2R52F:0:I;OXVS:F:B;S1PB0:0:I;S1PB1:0:I;S1PB2:0:I;S1PB3:0:I;S0R4U1:9:I;S0R57F:0:I;S0R36U0:16:I;S0R36U1:17:I;S0R36U2:11:I;S0R40F:13:I;S0R59F:0:I;S1R38F:0:I;S0R37U0:1:I;S2R17F:0:I;S1R127F:0:I;OCOX0:-398.8889:F;S0R95F:0:I;S1R74F:0:I;S1PBM:1:I;S0R8U0:1:I;S0R8U1:6:I;S0R109F:0:I;S0R41F:37:I;S1R20F:0:I;S0R0F:13:I;S0R21U0:25:I;S1PCB:0:I;S2R18F:0:I;S0R96F:0:I;S0R41U1:6:I;S0R110F:0:I;S2R54F:0:I;AC1:T:B;S0NK:0:I;AC3:F:B;AC4:F:B;AC5:F:B;AC6:F:B;AC7:T:B;AC8:F:B;S2R90F:0:I;S0NS:17:I;S0PGC:1:I;S0R42F:29:I;S1R21F:0:I;S0R1F:45:I;S1R110F:0:I;S0PGM:1:I;S2R19F:0:I;S1PU10:0:I;S0R97F:0:I;S1R76F:0:I;S0R38U1:15:I;S2R55F:0:I;AC14:F:B;S0R92F:0:I;S2R91F:0:I;S0PB2:0:I;S2PB0:0:I;S2PB1:0:I;S2PB2:0:I;S2PB3:0:I;S1R22F:0:I;S0R2F:45:I;S1R111F:0:I;OIC:F:B;Q2U:F:B;S0R98F:0:I;S0R112F:0:I;S2R56F:0:I;S0R43F:0:I;S0Q2:F:B;S2R92F:0:I;S2PBM:1:I;S2R120F:0:I;S2R31F:0:I;S0R44F:0:I;S1R23F:0:I;S0R3F:31:I;S2R81F:0:I;S1R112F:0:I;S2R8F:0:I;S0R80F:0:I;S0R99F:0:I;S1R0F:7:I;S1R78F:0:I;S0R31U0:9:I;S2PCB:0:I;S2R57F:0:I;S0PCH:0:I;S2PCH:0:I;S2R93F:0:I;S2R121F:0:I;S2PCP:0:I;S1R24F:0:I;S0R4F:21:I;S0R17U4:16:I;S1R113F:0:I;S1PGC:0:I;S0R81F:0:I;S0R3U1:0:I;S0R18U1:28:I;S0R18U2:20:I;S0R18U3:18:I;S1R1F:0:I;S1R79F:0:I;S1PGM:0:I;S0R45F:13:I;S0RN:8:I;S2R94F:0:I;S2R122F:0:I;S2R28F:0:I;S0R3U0:1:I;S0R3U2:6:I;S1R25F:0:I;S0R5F:37:I;S1R114F:0:I;S2R83F:0:I;S0R82F:0:I;OLG:0:I;S1R2F:0:I;S0R19U1:5:I;S0R19U2:23:I;S0R19U3:25:I;S2R59F:0:I;AV3:0:L;S0R46F:3:I;S0R10U0:3:I;S0R10U1:4:I;S2R95F:0:I;S2R123F:0:I;S0R47F:13:I;S1R49F:0:I;S1R26F:0:I;S0R6F:13:I;S1R115F:0:I;AC10:F:B;S2R84F:0:I;AC12:F:B;AC13:F:B;S1R62F:0:I;S1R3F:0:I;S2R41F:0:I;S2R0F:0:I;S0R41U0:5:I;S2R96F:0:I;S0R41U2:26:I;S0R41U3:3:I;S0R31U1:10:I;S0R30F:21:I;S1R27F:0:I;S0R7F:13:I;S1R116F:0:I;S0R84F:0:I;S1R63F:0:I;S1R4F:0:I;S2R42F:0:I;S2PGC:0:I;S2R1F:0:I;S0R35U0:13:I;S0R35U1:12:I;S2R97F:0:I;S2PGM:0:I;S2R125F:0:I;S0R49F:5:I;S1R28F:0:I;S0R8F:21:I;S1R117F:0:I;S0R85F:0:I;S1R86F:0:I;S2R86F:0:I;S1R64F:0:I;S1R5F:0:I;S0R118F:0:I;S0R7U0:2:I;S0R48F:3:I;S2R2F:0:I;S0R29U1:19:I;S0R29U2:17:I;S2R98F:0:I;S0R31F:19:I;S2R126F:0:I;HP5:T:B;S1R10F:0:I;S2R124F:0:I;S0R20U0:0:I;S0R9F:61:I;S1R9F:0:I;S1R118F:0:I;S0R86F:0:I;S1R65F:0:I;S1R6F:0:I;S0R119F:0:I;S0R32F:0:I;S2R49F:0:I;S1R121F:0:I;S2R80F:0:I;S2R99F:0:I;S2AP:0:I;S2R127F:0:I;S1R11F:0:I;S0R14U0:0:I;S0R14U1:3:I;S1R100F:0:I;S1R119F:0:I;S0R87F:0:I;S0R101F:0:I;S2R88F:0:I;S1R7F:0:I;S2R45F:0:I;S1R69F:0:I;S1R50F:0:I;S2R4F:0:I;S0R83F:0:I;S0R33F:0:I;S1R12F:0:I;S0R45U0:2:I;S1R40F:0:I;S0R88F:0:I;S0R102F:0:I;S1R8F:0:I;S2R46F:0:I;AV10:0:L;AV11:44:L;AV12:1:L;AV13:4:L;AV14:8:L;AV15:9:L;S2R5F:0:I;S1R123F:0:I;AV18:0:L;S0R34F:21:I;S1R13F:0:I;S1R102F:0:I;S1R87F:0:I;S0R70F:0:I;S0R89F:0:I;S0R103F:0:I;S0R30U0:2:I;S0R30U1:5:I;S2R47F:0:I;SVER:0:I;S2R6F:0:I;S1R58F:0:I;S2R111F:0:I;S0R35F:21:I;S1R14F:0:I;S1R103F:0:I;S0R2U0:2:I;S0R2U1:13:I;S0R2U2:14:I;S0R2U3:17:I;S0R2U4:3:I;S0R104F:0:I;S2R48F:0:I;S0R26U0:22:I;S2R7F:0:I;S2R110F:0:I;S1R59F:0:I;S0R36F:29:I;S1R15F:0:I;S1R104F:0:I;S0R72F:0:I;S1R51F:0:I;S0PU0:1:I;S0PU1:0:I;S0R105F:0:I;S0PU3:2:I;S0PU4:1:I;S0PU5:1:I;S0PU6:1:I;S0PU7:1:I;S0PU8:0:I;S0PU9:0:I;S2R85F:0:I;S2R113F:0:I;S0R37F:13:I;S1R16F:0:I;S1PU5:0:I;S1R105F:0:I;S0R73F:0:I;S1R52F:0:I;AV16:37:L;OVF:3:I;S0R106F:0:I;OVM:2:I;S0R40U0:2:I;S2R9F:0:I;S2R114F:0:I;S0R38F:29:I;S2R112F:0:I;S1R17F:0:I;S0R22F:29:I;S1R106F:0:I;S0R74F:3:I;S1R53F:0:I;S0R107F:0:I;OXD:1:I;OXE:3:I;S0R71F:0:I;S0R34U0:8:I;S0R34U1:5:I;S2R87F:0:I;S0R20F:13:I;S2R115F:0:I;S2R53F:0:I;S0R39F:0:I;S0PWC:2:I;S1R18F:0:I;S0PWG:T:B;HP11:F:B;S1R107F:0:I;S0R75F:0:I;S0PWL:T:B;S1R54F:0:I;OXP:2:I;S2R33F:0:I;OXT:2:I;S0R6U0:6:I;S1R90F:0:I;S1PU0:0:I;S1PU1:0:I;S1PU2:0:I;S1PU3:0:I;S1PU4:0:I;S0R21F:13:I;S1PU6:0:I;S1PU7:0:I;S1PU8:0:I;S1PU9:0:I;S1R19F:0:I;S1R75F:0:I;S0PU10:0:I;S1R108F:0:I;S0R76F:0:I;S1R30F:0:I;S1R55F:0:I;OXBM:F:B;S2R34F:0:I;OXBR:F:B;S1R91F:0:I;S0R124F:0:I;S2R70F:0:I;S2R89F:0:I;S1AP:0:I;S2R117F:0:I;AV17:0:L;S0R13U0:6:I;S0R13U1:5:I;S0R13U2:16:I;S0R13U3:17:I;S1R109F:0:I;S0R77F:0:I;S1R56F:0:I;S2R35F:0:I;S0R24F:0:I;OXCT:F:B;S1R92F:0:I;AV1:55:L;AV2:1:L;S2R71F:0:I;AV4:0:L;AV5:0:L;AV6:49:L;S0R23F:19:I;AV8:0:L;S2R12F:0:I;S0R108F:0:I;OCOY0:192.4749:F;S1R77F:0:I;S0DL:0:I;S0R78F:0:I;S0R16U1:8:I;S1PWC:6:I;S1R57F:0:I;S1PWE:F:B;S1PWG:F:B;S0R120F:0:I;S1PWL:F:B;S1R93F:0:I;S2R72F:0:I;S0R126F:0:I;S2R100F:0:I;S1R60F:0:I;S2R119F:0:I;S2PU0:0:I;S2PU1:0:I;S2PU2:0:I;S0R38U2:27:I;S2PU4:0:I;S2PU5:0:I;S2PU6:0:I;S2PU7:0:I;S2PU8:0:I;S2PU9:0:I;AC15:F:B;AC16:F:B;AC17:F:B;AC18:F:B;S2R116F:0:I;S0PU2:1:I;S1R94F:0:I;S0R25U0:22:I;S1DL:0:I;S0R127F:0:I;S0R25F:13:I;S1R61F:0:I;S0R38U0:14:I;S1R29F:0:I;S2R101F:0:I;S0R1U0:2:I;S0R1U1:6:I;S0R1U2:7:I;S0R1U3:10:I;S0R1U4:11:I;S0R23U0:13:I;S0R23U1:14:I;OXRC:F:B;S2R38F:0:I;OXFS:F:B;S1R95F:0:I;S2R74F:0:I;S1R96F:0:I;S2NK:0:I;S0R26F:23:I;S2R102F:0:I;S2NS:0:I;S0R62F:0:I;OCLA:T:B;S1R41F:0:I;S0R17U0:0:I;S0R17U1:2:I;S0R17U2:1:I;S0R17U3:23:I;S2R39F:0:I;S0R17U5:17:I;S0R111F:0:I;SVR:0:I;S2PWC:6:I;S2R118F:0:I;S2PWE:F:B;S2R75F:0:I;S2PWG:F:B;S2R103F:0:I;HP4:T:B;S0R27F:13:I;S2PWL:F:B;HP8:T:B;S2R58F:0:I;S0R63F:0:I;S0R13F:37:I;S0R18U0:29:I;S1R42F:0:I;S0PWE:T:B;S0R16U2:7:I;S2R21F:0:I;S2PU10:0:I;S1R97F:0:I;S0R61F:0:I;S2R76F:0:I;S2R104F:0:I;S0R28F:9:I;S2Q2:F:B;OXTU:2:I;S0R64F:0:I;S1R43F:0:I;S2R22F:0:I;S0R12F:45:I;S0R113F:0:I;S1R98F:0:I;S1R101F:0:I;S2R77F:0:I;S0R10F:21:I;S2R105F:0:I;S0R29F:45:I;AC0:T:B;S1R99F:0:I;AC2:T:B;S0R125F:0:I;S0R60F:0:I;S0R65F:0:I;AC9:F:B;S1R44F:0:I;S0R15F:0:I;S2R23F:0:I;S2R3F:0:I;S0R5U0:24:I;S0R5U1:21:I;S0R5U2:11:I;S1R80F:0:I;S2RD:0:I;S0R27U0:1:I;S2R78F:0:I;S0R11F:13:I;S2R106F:0:I;S2RN:0:I;S1R66F:0:I;S0R66F:0:I;S1R45F:0:I;S0R19U0:22:I;S2R24F:0:I;S2R69F:0:I;S1PCP:0:I;S1R81F:0:I;S2R60F:0:I;S0R115F:0:I;S2R73F:0:I;S2R79F:0:I;S0AP:1:I;S2R107F:0:I;S1R39F:0:I;S0R12U0:6:I;S0R12U1:5:I;S0R12U2:4:I;S0R12U3:1:I;S0R12U4:0:I;S1R67F:0:I;S0R67F:0:I;S1R46F:0:I;S2R25F:0:I;S1R82F:0:I;S2R61F:0:I;S0R116F:0:I;AWK0:113:I;AWK1:11:I;AWK2:27:I;AWK3:7:I;AWK4:0:I;S2PB4:0:I;S2R82F:0:I;S1R68F:0:I;S0R68F:0:I;S0R5U3:4:I;S1R47F:0:I;S2R26F:0:I;S2R108F:0:I;S2R30F:0:I;S1R83F:0:I;S0R16F:35:I;S2R62F:0:I;S0R117F:0:I;S0R14F:29:I;S2R109F:0:I;S0R29U0:18:I;S0R29U3:20:I;S0R29U4:8:I;S0R50F:0:I;S0R69F:0:I;S1R48F:0:I;S2R27F:0:I;S0R100F:0:I;S1R84F:0:I;S2R63F:0:I;S0R9U0:15:I;S0R9U1:14:I;S0R9U2:6:I;S0R9U3:5:I;S0R9U4:24:I;S0R9U5:28:I;S0R114F:0:I;S0R0U0:4:I;HP0:T:B;HP1:T:B;HP2:T:B;HP3:T:B;S0R22U0:5:I;S0R22U1:4:I;HP6:T:B;HP7:F:B;AC11:F:B;HP9:T:B;AV0:1:L;S1R85F:0:I;S2R32F:0:I;S2R64F:0:I;S1NK:0:I;AV7:498:L;AV9:3:L;S1R88F:0:I
+</textarea><br />
+<button onclick="loadSavegame();" accesskey="L">Load savegame</button>
+<button onclick="generateSavegame();" accesskey="S">Generate savegame</button>
+
+<div id="savegamefields">
+
+<h2>Achievements</h2>
+<table>
+<thead>
+    <tr><th>Description</th><th>Completed</th><th>Value</th></tr>
+</thead>
+<tbody>
+    <tr><td>Remember How To Fly</td><td><input type="checkbox" data-type="B" id="AC0" name="AC0" value="1" /></td><td><input type="number" data-type="L" id="AV0" name="AV0" value="0" /></td></tr>
+    <tr><td>Enter The Sewers</td><td><input type="checkbox" data-type="B" id="AC1" name="AC1" value="1" /></td><td><input type="number" data-type="L" id="AV1" name="AV1" value="0" /></td></tr>
+    <tr><td>Rescue Blossom</td><td><input type="checkbox" data-type="B" id="AC2" name="AC2" value="1" /></td><td><input type="number" data-type="L" id="AV2" name="AV2" value="0" /></td></tr>
+    <tr><td>Rescue Bubbles</td><td><input type="checkbox" data-type="B" id="AC3" name="AC3" value="1" /></td><td><input type="number" data-type="L" id="AV3" name="AV3" value="0" /></td></tr>
+    <tr><td>Rescue The Mayor</td><td><input type="checkbox" data-type="B" id="AC4" name="AC4" value="1" /></td><td><input type="number" data-type="L" id="AV4" name="AV4" value="0" /></td></tr>
+    <tr><td>Defeat Mojo Jojo</td><td><input type="checkbox" data-type="B" id="AC5" name="AC5" value="1" /></td><td><input type="number" data-type="L" id="AV5" name="AV5" value="0" /></td></tr>
+    <tr><td>Destroy 100 Blocks</td><td><input type="checkbox" data-type="B" id="AC6" name="AC6" value="1" /></td><td><input type="number" data-type="L" id="AV6" name="AV6" value="0" /> of 100</td></tr>
+    <tr><td>Destroy 100 Robots</td><td><input type="checkbox" data-type="B" id="AC7" name="AC7" value="1" /></td><td><input type="number" data-type="L" id="AV7" name="AV7" value="0" /> of 100</td></tr>
+    <tr><td>Dash Bash 10 Robots</td><td><input type="checkbox" data-type="B" id="AC8" name="AC8" value="1" /></td><td><input type="number" data-type="L" id="AV8" name="AV8" value="0" /> of 10</td></tr>
+    <tr>
+        <td>Destroy 10 Robots with each Type of Attack</td>
+        <td><input type="checkbox" data-type="B" id="AC9" name="AC9" value="1" /></td>
+        <td>
+            <input type="number" data-type="L" id="AV9" name="AV9" value="0" /> of 5
+            (<input type="number" data-type="I" id="AWK0" name="AWK0" value="0" />/<input type="number" data-type="I" id="AWK1" name="AWK1" value="0" />/<input type="number" data-type="I" id="AWK2" name="AWK2" value="0" />/<input type="number" data-type="I" id="AWK3" name="AWK3" value="0" />/<input type="number" data-type="I" id="AWK4" name="AWK4" value="0" />)
+        </td></tr>
+    <tr><td>Unleash A Fully Charged Attack</td><td><input type="checkbox" data-type="B" id="AC10" name="AC10" value="1" /></td><td><input type="number" data-type="L" id="AV10" name="AV10" value="0" /></td></tr>
+    <tr><td>Visit Every Room</td><td><input type="checkbox" data-type="B" id="AC11" name="AC11" value="1" /></td><td><input type="number" data-type="L" id="AV11" name="AV11" value="0" /> of 93</td></tr>
+    <tr><td>Get All The Booster Types</td><td><input type="checkbox" data-type="B" id="AC12" name="AC12" value="1" /></td><td><input type="number" data-type="L" id="AV12" name="AV12" value="0" /> of 5</td></tr>
+    <tr><td>Maximize Your Power Meter</td><td><input type="checkbox" data-type="B" id="AC13" name="AC13" value="1" /></td><td><input type="number" data-type="L" id="AV13" name="AV13" value="0" /> of 16</td></tr>
+    <tr><td>Maximize Your Health Meter</td><td><input type="checkbox" data-type="B" id="AC14" name="AC14" value="1" /></td><td><input type="number" data-type="L" id="AV14" name="AV14" value="0" /> of 16</td></tr>
+    <tr><td>Get Every Booster Module</td><td><input type="checkbox" data-type="B" id="AC15" name="AC15" value="1" /></td><td><input type="number" data-type="L" id="AV15" name="AV15" value="0" /> of 20</td></tr>
+    <tr><td>Clear Every Room</td><td><input type="checkbox" data-type="B" id="AC16" name="AC16" value="1" /></td><td><input type="number" data-type="L" id="AV16" name="AV16" value="0" /> of 93</td></tr>
+    <tr><td>Beat Hardcore Mode with 5 or fewer Saves</td><td><input type="checkbox" data-type="B" id="AC17" name="AC17" value="1" /></td><td><input type="number" data-type="L" id="AV17" name="AV17" value="0" /></td></tr>
+    <tr><td>Complete Mojo's Key Quest</td><td><input type="checkbox" data-type="B" id="AC18" name="AC18" value="1" /></td><td><input type="number" data-type="L" id="AV18" name="AV18" value="0" /></td></tr>
+</tbody>
+</table>
+
+<h2>Unknown values</h2>
+<table>
+<thead>
+    <tr><td>Description</td><td>Value</td></tr>
+</thead>
+<tbody>
+    <tr><td>HP</td><td>
+        <input type="checkbox" data-type="B" id="HP0" name="HP0" value="1" />
+        <input type="checkbox" data-type="B" id="HP1" name="HP1" value="1" />
+        <input type="checkbox" data-type="B" id="HP2" name="HP2" value="1" />
+        <input type="checkbox" data-type="B" id="HP3" name="HP3" value="1" />
+        <input type="checkbox" data-type="B" id="HP4" name="HP4" value="1" />
+        <input type="checkbox" data-type="B" id="HP5" name="HP5" value="1" />
+        <input type="checkbox" data-type="B" id="HP6" name="HP6" value="1" />
+        <input type="checkbox" data-type="B" id="HP7" name="HP7" value="1" />
+        <input type="checkbox" data-type="B" id="HP8" name="HP8" value="1" />
+        <input type="checkbox" data-type="B" id="HP9" name="HP9" value="1" />
+        <input type="checkbox" data-type="B" id="HP10" name="HP10" value="1" />
+        <input type="checkbox" data-type="B" id="HP11" name="HP11" value="1" />
+    </td></tr>
+    <tr><td>Q2U</td><td><input type="checkbox" data-type="B" id="Q2U" name="Q2U" value="1" /></td></tr>
+    <tr><td>SVER</td><td><input type="number" data-type="I" id="SVER" name="SVER" value="0" /></td></tr>
+    <tr><td>SVR</td><td><input type="number" data-type="I" id="SVR" name="SVR" value="0" /></td></tr>
+</tbody>
+</table>
+
+<h2>Savegames</h2>
+<table id="savegames">
+<thead>
+    <tr>
+        <th>Description</th>
+        <th>
+            Slot 1
+            <button onclick="copySavegame(0, 1);" title="Copy to Slot 2">→2</button>
+            <button onclick="copySavegame(0, 2);" title="Copy to Slot 3">→3</button>
+        </th>
+        <th>
+            <button onclick="copySavegame(1, 0);" title="Copy to Slot 1">1←</button>
+            Slot 2
+            <button onclick="copySavegame(1, 2);" title="Copy to Slot 3">→3</button>
+        </th>
+        <th>
+            <button onclick="copySavegame(2, 0);" title="Copy to Slot 1">1←</button>
+            <button onclick="copySavegame(2, 1);" title="Copy to Slot 2">2←</button>
+            Slot 3
+        </th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Difficulty</td>
+        <td><select id="S0DL" name="S0DL" size="1"><option value="0">Casual</option><option value="1">Normal</option><option value="2">Hardcore</option></select></td>
+        <td><select id="S1DL" name="S1DL" size="1"><option value="0">Casual</option><option value="1">Normal</option><option value="2">Hardcore</option></select></td>
+        <td><select id="S2DL" name="S2DL" size="1"><option value="0">Casual</option><option value="1">Normal</option><option value="2">Hardcore</option></select></td>
+    </tr>
+    <tr>
+        <td>Booster Modules Collected</td>
+        <td><input type="number" id="S0PCB" name="S0PCB" value="0" /></td>
+        <td><input type="number" id="S1PCB" name="S1PCB" value="0" /></td>
+        <td><input type="number" id="S2PCB" name="S2PCB" value="0" /></td>
+    </tr>
+    <tr>
+        <td>Booster 1: Damage Reduction</td>
+        <td><select id="S0PB0" name="S0PB0" size="1"><option value="0">Disabled</option><option value="1">Available</option><option value="2">Equipped</option></select></td>
+        <td><select id="S1PB0" name="S1PB0" size="1"><option value="0">Disabled</option><option value="1">Available</option><option value="2">Equipped</option></select></td>
+        <td><select id="S2PB0" name="S2PB0" size="1"><option value="0">Disabled</option><option value="1">Available</option><option value="2">Equipped</option></select></td>
+    </tr>
+    <tr>
+        <td>Booster 2: xxx</td>
+        <td><select id="S0PB1" name="S0PB1" size="1"><option value="0">Disabled</option><option value="1">Available</option><option value="2">Equipped</option></select></td>
+        <td><select id="S1PB1" name="S1PB1" size="1"><option value="0">Disabled</option><option value="1">Available</option><option value="2">Equipped</option></select></td>
+        <td><select id="S2PB1" name="S2PB1" size="1"><option value="0">Disabled</option><option value="1">Available</option><option value="2">Equipped</option></select></td>
+    </tr>
+    <tr>
+        <td>Booster 3: xxx</td>
+        <td><select id="S0PB2" name="S0PB2" size="1"><option value="0">Disabled</option><option value="1">Available</option><option value="2">Equipped</option></select></td>
+        <td><select id="S1PB2" name="S1PB2" size="1"><option value="0">Disabled</option><option value="1">Available</option><option value="2">Equipped</option></select></td>
+        <td><select id="S2PB2" name="S2PB2" size="1"><option value="0">Disabled</option><option value="1">Available</option><option value="2">Equipped</option></select></td>
+    </tr>
+    <tr>
+        <td>Booster 4: xxx</td>
+        <td><select id="S0PB3" name="S0PB3" size="1"><option value="0">Disabled</option><option value="1">Available</option><option value="2">Equipped</option></select></td>
+        <td><select id="S1PB3" name="S1PB3" size="1"><option value="0">Disabled</option><option value="1">Available</option><option value="2">Equipped</option></select></td>
+        <td><select id="S2PB3" name="S2PB3" size="1"><option value="0">Disabled</option><option value="1">Available</option><option value="2">Equipped</option></select></td>
+    </tr>
+    <tr>
+        <td>Booster 5: xxx</td>
+        <td><select id="S0PB4" name="S0PB4" size="1"><option value="0">Disabled</option><option value="1">Available</option><option value="2">Equipped</option></select></td>
+        <td><select id="S1PB4" name="S1PB4" size="1"><option value="0">Disabled</option><option value="1">Available</option><option value="2">Equipped</option></select></td>
+        <td><select id="S2PB4" name="S2PB4" size="1"><option value="0">Disabled</option><option value="1">Available</option><option value="2">Equipped</option></select></td>
+    </tr>
+    <tr>
+        <td>Robots destroyed</td>
+        <td><input type="number" id="S0RD" name="S0RD" value="0" /></td>
+        <td><input type="number" id="S1RD" name="S1RD" value="0" /></td>
+        <td><input type="number" id="S2RD" name="S2RD" value="0" /></td>
+    </tr>
+    <tr>
+        <td>Game Saves</td>
+        <td><input type="number" id="S0NS" name="S0NS" value="0" /></td>
+        <td><input type="number" id="S1NS" name="S1NS" value="0" /></td>
+        <td><input type="number" id="S2NS" name="S2NS" value="0" /></td>
+    </tr>
+    <tr>
+        <td>AP</td>
+        <td><input type="number" id="S0AP" name="S0AP" value="0" /></td>
+        <td><input type="number" id="S1AP" name="S1AP" value="0" /></td>
+        <td><input type="number" id="S2AP" name="S2AP" value="0" /></td>
+    </tr>
+    <tr>
+        <td>NK</td>
+        <td><input type="number" id="S0NK" name="S0NK" value="0" /></td>
+        <td><input type="number" id="S1NK" name="S1NK" value="0" /></td>
+        <td><input type="number" id="S2NK" name="S2NK" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PBM</td>
+        <td><input type="number" id="S0PBM" name="S0PBM" value="0" /></td>
+        <td><input type="number" id="S1PBM" name="S1PBM" value="0" /></td>
+        <td><input type="number" id="S2PBM" name="S2PBM" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PCH</td>
+        <td><input type="number" id="S0PCH" name="S0PCH" value="0" /></td>
+        <td><input type="number" id="S1PCH" name="S1PCH" value="0" /></td>
+        <td><input type="number" id="S2PCH" name="S2PCH" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PCP</td>
+        <td><input type="number" id="S0PCP" name="S0PCP" value="0" /></td>
+        <td><input type="number" id="S1PCP" name="S1PCP" value="0" /></td>
+        <td><input type="number" id="S2PCP" name="S2PCP" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PGC</td>
+        <td><input type="number" id="S0PGC" name="S0PGC" value="0" /></td>
+        <td><input type="number" id="S1PGC" name="S1PGC" value="0" /></td>
+        <td><input type="number" id="S2PGC" name="S2PGC" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PGM</td>
+        <td><input type="number" id="S0PGM" name="S0PGM" value="0" /></td>
+        <td><input type="number" id="S1PGM" name="S1PGM" value="0" /></td>
+        <td><input type="number" id="S2PGM" name="S2PGM" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PU0</td>
+        <td><input type="number" id="S0PU0" name="S0PU0" value="0" /></td>
+        <td><input type="number" id="S1PU0" name="S1PU0" value="0" /></td>
+        <td><input type="number" id="S2PU0" name="S2PU0" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PU1</td>
+        <td><input type="number" id="S0PU1" name="S0PU1" value="0" /></td>
+        <td><input type="number" id="S1PU1" name="S1PU1" value="0" /></td>
+        <td><input type="number" id="S2PU1" name="S2PU1" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PU2</td>
+        <td><input type="number" id="S0PU2" name="S0PU2" value="0" /></td>
+        <td><input type="number" id="S1PU2" name="S1PU2" value="0" /></td>
+        <td><input type="number" id="S2PU2" name="S2PU2" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PU3</td>
+        <td><input type="number" id="S0PU3" name="S0PU3" value="0" /></td>
+        <td><input type="number" id="S1PU3" name="S1PU3" value="0" /></td>
+        <td><input type="number" id="S2PU3" name="S2PU3" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PU4</td>
+        <td><input type="number" id="S0PU4" name="S0PU4" value="0" /></td>
+        <td><input type="number" id="S1PU4" name="S1PU4" value="0" /></td>
+        <td><input type="number" id="S2PU4" name="S2PU4" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PU5</td>
+        <td><input type="number" id="S0PU5" name="S0PU5" value="0" /></td>
+        <td><input type="number" id="S1PU5" name="S1PU5" value="0" /></td>
+        <td><input type="number" id="S2PU5" name="S2PU5" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PU6</td>
+        <td><input type="number" id="S0PU6" name="S0PU6" value="0" /></td>
+        <td><input type="number" id="S1PU6" name="S1PU6" value="0" /></td>
+        <td><input type="number" id="S2PU6" name="S2PU6" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PU7</td>
+        <td><input type="number" id="S0PU7" name="S0PU7" value="0" /></td>
+        <td><input type="number" id="S1PU7" name="S1PU7" value="0" /></td>
+        <td><input type="number" id="S2PU7" name="S2PU7" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PU8</td>
+        <td><input type="number" id="S0PU8" name="S0PU8" value="0" /></td>
+        <td><input type="number" id="S1PU8" name="S1PU8" value="0" /></td>
+        <td><input type="number" id="S2PU8" name="S2PU8" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PU9</td>
+        <td><input type="number" id="S0PU9" name="S0PU9" value="0" /></td>
+        <td><input type="number" id="S1PU9" name="S1PU9" value="0" /></td>
+        <td><input type="number" id="S2PU9" name="S2PU9" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PU10</td>
+        <td><input type="number" id="S0PU10" name="S0PU10" value="0" /></td>
+        <td><input type="number" id="S1PU10" name="S1PU10" value="0" /></td>
+        <td><input type="number" id="S2PU10" name="S2PU10" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PWC</td>
+        <td><input type="number" id="S0PWC" name="S0PWC" value="0" /></td>
+        <td><input type="number" id="S1PWC" name="S1PWC" value="0" /></td>
+        <td><input type="number" id="S2PWC" name="S2PWC" value="0" /></td>
+    </tr>
+    <tr>
+        <td>PWE</td>
+        <td><input type="checkbox" data-type="B" id="S0PWE" name="S0PWE" value="1" /></td>
+        <td><input type="checkbox" data-type="B" id="S1PWE" name="S1PWE" value="1" /></td>
+        <td><input type="checkbox" data-type="B" id="S2PWE" name="S2PWE" value="1" /></td>
+    </tr>
+    <tr>
+        <td>PWG</td>
+        <td><input type="checkbox" data-type="B" id="S0PWG" name="S0PWG" value="1" /></td>
+        <td><input type="checkbox" data-type="B" id="S1PWG" name="S1PWG" value="1" /></td>
+        <td><input type="checkbox" data-type="B" id="S2PWG" name="S2PWG" value="1" /></td>
+    </tr>
+    <tr>
+        <td>PWL</td>
+        <td><input type="checkbox" data-type="B" id="S0PWL" name="S0PWL" value="1" /></td>
+        <td><input type="checkbox" data-type="B" id="S1PWL" name="S1PWL" value="1" /></td>
+        <td><input type="checkbox" data-type="B" id="S2PWL" name="S2PWL" value="1" /></td>
+    </tr>
+    <tr>
+        <td>Q2</td>
+        <td><input type="checkbox" data-type="B" id="S0Q2" name="S0Q2" value="1" /></td>
+        <td><input type="checkbox" data-type="B" id="S1Q2" name="S1Q2" value="1" /></td>
+        <td><input type="checkbox" data-type="B" id="S2Q2" name="S2Q2" value="1" /></td>
+    </tr>
+    <tr>
+        <td>R0</td>
+        <td><input type="number" id="S0R0F" name="S0R0F" value="0" /><input type="number" id="S0R0U0" name="S0R0U0" value="0" /></td>
+        <td><input type="number" id="S1R0F" name="S1R0F" value="0" /><input type="number" id="S1R0U0" name="S1R0U0" value="0" /></td>
+        <td><input type="number" id="S2R0F" name="S2R0F" value="0" /><input type="number" id="S2R0U0" name="S2R0U0" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R1</td>
+        <td><input type="number" id="S0R1F" name="S0R1F" value="0" /><input type="number" id="S0R1U0" name="S0R1U0" value="0" /><input type="number" id="S0R1U1" name="S0R1U1" value="0" /><input type="number" id="S0R1U2" name="S0R1U2" value="0" /><input type="number" id="S0R1U3" name="S0R1U3" value="0" /><input type="number" id="S0R1U4" name="S0R1U4" value="0" /></td>
+        <td><input type="number" id="S1R1F" name="S1R1F" value="0" /><input type="number" id="S1R1U0" name="S1R1U0" value="0" /><input type="number" id="S1R1U1" name="S1R1U1" value="0" /><input type="number" id="S1R1U2" name="S1R1U2" value="0" /><input type="number" id="S1R1U3" name="S1R1U3" value="0" /><input type="number" id="S1R1U4" name="S1R1U4" value="0" /></td>
+        <td><input type="number" id="S2R1F" name="S2R1F" value="0" /><input type="number" id="S2R1U0" name="S2R1U0" value="0" /><input type="number" id="S2R1U1" name="S2R1U1" value="0" /><input type="number" id="S2R1U2" name="S2R1U2" value="0" /><input type="number" id="S2R1U3" name="S2R1U3" value="0" /><input type="number" id="S2R1U4" name="S2R1U4" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R2</td>
+        <td><input type="number" id="S0R2F" name="S0R2F" value="0" /><input type="number" id="S0R2U0" name="S0R2U0" value="0" /><input type="number" id="S0R2U1" name="S0R2U1" value="0" /><input type="number" id="S0R2U2" name="S0R2U2" value="0" /><input type="number" id="S0R2U3" name="S0R2U3" value="0" /><input type="number" id="S0R2U4" name="S0R2U4" value="0" /></td>
+        <td><input type="number" id="S1R2F" name="S1R2F" value="0" /><input type="number" id="S1R2U0" name="S1R2U0" value="0" /><input type="number" id="S1R2U1" name="S1R2U1" value="0" /><input type="number" id="S1R2U2" name="S1R2U2" value="0" /><input type="number" id="S1R2U3" name="S1R2U3" value="0" /><input type="number" id="S1R2U4" name="S1R2U4" value="0" /></td>
+        <td><input type="number" id="S2R2F" name="S2R2F" value="0" /><input type="number" id="S2R2U0" name="S2R2U0" value="0" /><input type="number" id="S2R2U1" name="S2R2U1" value="0" /><input type="number" id="S2R2U2" name="S2R2U2" value="0" /><input type="number" id="S2R2U3" name="S2R2U3" value="0" /><input type="number" id="S2R2U4" name="S2R2U4" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R3</td>
+        <td><input type="number" id="S0R3F" name="S0R3F" value="0" /><input type="number" id="S0R3U0" name="S0R3U0" value="0" /><input type="number" id="S0R3U1" name="S0R3U1" value="0" /><input type="number" id="S0R3U2" name="S0R3U2" value="0" /></td>
+        <td><input type="number" id="S1R3F" name="S1R3F" value="0" /><input type="number" id="S1R3U0" name="S1R3U0" value="0" /><input type="number" id="S1R3U1" name="S1R3U1" value="0" /><input type="number" id="S1R3U2" name="S1R3U2" value="0" /></td>
+        <td><input type="number" id="S2R3F" name="S2R3F" value="0" /><input type="number" id="S2R3U0" name="S2R3U0" value="0" /><input type="number" id="S2R3U1" name="S2R3U1" value="0" /><input type="number" id="S2R3U2" name="S2R3U2" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R4</td>
+        <td><input type="number" id="S0R4F" name="S0R4F" value="0" /><input type="number" id="S0R4U0" name="S0R4U0" value="0" /><input type="number" id="S0R4U1" name="S0R4U1" value="0" /></td>
+        <td><input type="number" id="S1R4F" name="S1R4F" value="0" /><input type="number" id="S1R4U0" name="S1R4U0" value="0" /><input type="number" id="S1R4U1" name="S1R4U1" value="0" /></td>
+        <td><input type="number" id="S2R4F" name="S2R4F" value="0" /><input type="number" id="S2R4U0" name="S2R4U0" value="0" /><input type="number" id="S2R4U1" name="S2R4U1" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R5</td>
+        <td><input type="number" id="S0R5F" name="S0R5F" value="0" /><input type="number" id="S0R5U0" name="S0R5U0" value="0" /><input type="number" id="S0R5U1" name="S0R5U1" value="0" /><input type="number" id="S0R5U2" name="S0R5U2" value="0" /><input type="number" id="S0R5U3" name="S0R5U3" value="0" /></td>
+        <td><input type="number" id="S1R5F" name="S1R5F" value="0" /><input type="number" id="S1R5U0" name="S1R5U0" value="0" /><input type="number" id="S1R5U1" name="S1R5U1" value="0" /><input type="number" id="S1R5U2" name="S1R5U2" value="0" /><input type="number" id="S1R5U3" name="S1R5U3" value="0" /></td>
+        <td><input type="number" id="S2R5F" name="S2R5F" value="0" /><input type="number" id="S2R5U0" name="S2R5U0" value="0" /><input type="number" id="S2R5U1" name="S2R5U1" value="0" /><input type="number" id="S2R5U2" name="S2R5U2" value="0" /><input type="number" id="S2R5U3" name="S2R5U3" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R6</td>
+        <td><input type="number" id="S0R6F" name="S0R6F" value="0" /><input type="number" id="S0R6U0" name="S0R6U0" value="0" /></td>
+        <td><input type="number" id="S1R6F" name="S1R6F" value="0" /><input type="number" id="S1R6U0" name="S1R6U0" value="0" /></td>
+        <td><input type="number" id="S2R6F" name="S2R6F" value="0" /><input type="number" id="S2R6U0" name="S2R6U0" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R7</td>
+        <td><input type="number" id="S0R7F" name="S0R7F" value="0" /><input type="number" id="S0R7U0" name="S0R7U0" value="0" /></td>
+        <td><input type="number" id="S1R7F" name="S1R7F" value="0" /><input type="number" id="S1R7U0" name="S1R7U0" value="0" /></td>
+        <td><input type="number" id="S2R7F" name="S2R7F" value="0" /><input type="number" id="S2R7U0" name="S2R7U0" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R8</td>
+        <td><input type="number" id="S0R8F" name="S0R8F" value="0" /><input type="number" id="S0R8U0" name="S0R8U0" value="0" /><input type="number" id="S0R8U1" name="S0R8U1" value="0" /></td>
+        <td><input type="number" id="S1R8F" name="S1R8F" value="0" /><input type="number" id="S1R8U0" name="S1R8U0" value="0" /><input type="number" id="S1R8U1" name="S1R8U1" value="0" /></td>
+        <td><input type="number" id="S2R8F" name="S2R8F" value="0" /><input type="number" id="S2R8U0" name="S2R8U0" value="0" /><input type="number" id="S2R8U1" name="S2R8U1" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R9</td>
+        <td><input type="number" id="S0R9F" name="S0R9F" value="0" /><input type="number" id="S0R9U0" name="S0R9U0" value="0" /><input type="number" id="S0R9U1" name="S0R9U1" value="0" /><input type="number" id="S0R9U2" name="S0R9U2" value="0" /><input type="number" id="S0R9U3" name="S0R9U3" value="0" /><input type="number" id="S0R9U4" name="S0R9U4" value="0" /><input type="number" id="S0R9U5" name="S0R9U5" value="0" /><input type="number" id="S0R9U6" name="S0R9U6" value="0" /></td>
+        <td><input type="number" id="S1R9F" name="S1R9F" value="0" /><input type="number" id="S1R9U0" name="S1R9U0" value="0" /><input type="number" id="S1R9U1" name="S1R9U1" value="0" /><input type="number" id="S1R9U2" name="S1R9U2" value="0" /><input type="number" id="S1R9U3" name="S1R9U3" value="0" /><input type="number" id="S1R9U4" name="S1R9U4" value="0" /><input type="number" id="S1R9U5" name="S1R9U5" value="0" /><input type="number" id="S1R9U6" name="S1R9U6" value="0" /></td>
+        <td><input type="number" id="S2R9F" name="S2R9F" value="0" /><input type="number" id="S2R9U0" name="S2R9U0" value="0" /><input type="number" id="S2R9U1" name="S2R9U1" value="0" /><input type="number" id="S2R9U2" name="S2R9U2" value="0" /><input type="number" id="S2R9U3" name="S2R9U3" value="0" /><input type="number" id="S2R9U4" name="S2R9U4" value="0" /><input type="number" id="S2R9U5" name="S2R9U5" value="0" /><input type="number" id="S2R9U6" name="S2R9U6" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R10</td>
+        <td><input type="number" id="S0R10F" name="S0R10F" value="0" /><input type="number" id="S0R10U0" name="S0R10U0" value="0" /><input type="number" id="S0R10U1" name="S0R10U1" value="0" /></td>
+        <td><input type="number" id="S1R10F" name="S1R10F" value="0" /><input type="number" id="S1R10U0" name="S1R10U0" value="0" /><input type="number" id="S1R10U1" name="S1R10U1" value="0" /></td>
+        <td><input type="number" id="S2R10F" name="S2R10F" value="0" /><input type="number" id="S2R10U0" name="S2R10U0" value="0" /><input type="number" id="S2R10U1" name="S2R10U1" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R11</td>
+        <td><input type="number" id="S0R11F" name="S0R11F" value="0" /><input type="number" id="S0R11U0" name="S0R11U0" value="0" /></td>
+        <td><input type="number" id="S1R11F" name="S1R11F" value="0" /><input type="number" id="S1R11U0" name="S1R11U0" value="0" /></td>
+        <td><input type="number" id="S2R11F" name="S2R11F" value="0" /><input type="number" id="S2R11U0" name="S2R11U0" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R12</td>
+        <td><input type="number" id="S0R12F" name="S0R12F" value="0" /><input type="number" id="S0R12U0" name="S0R12U0" value="0" /><input type="number" id="S0R12U1" name="S0R12U1" value="0" /><input type="number" id="S0R12U2" name="S0R12U2" value="0" /><input type="number" id="S0R12U3" name="S0R12U3" value="0" /><input type="number" id="S0R12U4" name="S0R12U4" value="0" /></td>
+        <td><input type="number" id="S1R12F" name="S1R12F" value="0" /><input type="number" id="S1R12U0" name="S1R12U0" value="0" /><input type="number" id="S1R12U1" name="S1R12U1" value="0" /><input type="number" id="S1R12U2" name="S1R12U2" value="0" /><input type="number" id="S1R12U3" name="S1R12U3" value="0" /><input type="number" id="S1R12U4" name="S1R12U4" value="0" /></td>
+        <td><input type="number" id="S2R12F" name="S2R12F" value="0" /><input type="number" id="S2R12U0" name="S2R12U0" value="0" /><input type="number" id="S2R12U1" name="S2R12U1" value="0" /><input type="number" id="S2R12U2" name="S2R12U2" value="0" /><input type="number" id="S2R12U3" name="S2R12U3" value="0" /><input type="number" id="S2R12U4" name="S2R12U4" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R13</td>
+        <td><input type="number" id="S0R13F" name="S0R13F" value="0" /><input type="number" id="S0R13U0" name="S0R13U0" value="0" /><input type="number" id="S0R13U1" name="S0R13U1" value="0" /><input type="number" id="S0R13U2" name="S0R13U2" value="0" /><input type="number" id="S0R13U3" name="S0R13U3" value="0" /></td>
+        <td><input type="number" id="S1R13F" name="S1R13F" value="0" /><input type="number" id="S1R13U0" name="S1R13U0" value="0" /><input type="number" id="S1R13U1" name="S1R13U1" value="0" /><input type="number" id="S1R13U2" name="S1R13U2" value="0" /><input type="number" id="S1R13U3" name="S1R13U3" value="0" /></td>
+        <td><input type="number" id="S2R13F" name="S2R13F" value="0" /><input type="number" id="S2R13U0" name="S2R13U0" value="0" /><input type="number" id="S2R13U1" name="S2R13U1" value="0" /><input type="number" id="S2R13U2" name="S2R13U2" value="0" /><input type="number" id="S2R13U3" name="S2R13U3" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R14</td>
+        <td><input type="number" id="S0R14F" name="S0R14F" value="0" /><input type="number" id="S0R14U0" name="S0R14U0" value="0" /><input type="number" id="S0R14U1" name="S0R14U1" value="0" /><input type="number" id="S0R14U2" name="S0R14U2" value="0" /></td>
+        <td><input type="number" id="S1R14F" name="S1R14F" value="0" /><input type="number" id="S1R14U0" name="S1R14U0" value="0" /><input type="number" id="S1R14U1" name="S1R14U1" value="0" /><input type="number" id="S1R14U2" name="S1R14U2" value="0" /></td>
+        <td><input type="number" id="S2R14F" name="S2R14F" value="0" /><input type="number" id="S2R14U0" name="S2R14U0" value="0" /><input type="number" id="S2R14U1" name="S2R14U1" value="0" /><input type="number" id="S2R14U2" name="S2R14U2" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R15</td>
+        <td><input type="number" id="S0R15F" name="S0R15F" value="0" /></td>
+        <td><input type="number" id="S1R15F" name="S1R15F" value="0" /></td>
+        <td><input type="number" id="S2R15F" name="S2R15F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R16</td>
+        <td><input type="number" id="S0R16F" name="S0R16F" value="0" /><input type="number" id="S0R16U0" name="S0R16U0" value="0" /><input type="number" id="S0R16U1" name="S0R16U1" value="0" /><input type="number" id="S0R16U2" name="S0R16U2" value="0" /><input type="number" id="S0R16U3" name="S0R16U3" value="0" /></td>
+        <td><input type="number" id="S1R16F" name="S1R16F" value="0" /><input type="number" id="S1R16U0" name="S1R16U0" value="0" /><input type="number" id="S1R16U1" name="S1R16U1" value="0" /><input type="number" id="S1R16U2" name="S1R16U2" value="0" /><input type="number" id="S1R16U3" name="S1R16U3" value="0" /></td>
+        <td><input type="number" id="S2R16F" name="S2R16F" value="0" /><input type="number" id="S2R16U0" name="S2R16U0" value="0" /><input type="number" id="S2R16U1" name="S2R16U1" value="0" /><input type="number" id="S2R16U2" name="S2R16U2" value="0" /><input type="number" id="S2R16U3" name="S2R16U3" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R17</td>
+        <td><input type="number" id="S0R17F" name="S0R17F" value="0" /><input type="number" id="S0R17U0" name="S0R17U0" value="0" /><input type="number" id="S0R17U1" name="S0R17U1" value="0" /><input type="number" id="S0R17U2" name="S0R17U2" value="0" /><input type="number" id="S0R17U3" name="S0R17U3" value="0" /><input type="number" id="S0R17U4" name="S0R17U4" value="0" /><input type="number" id="S0R17U5" name="S0R17U5" value="0" /></td>
+        <td><input type="number" id="S1R17F" name="S1R17F" value="0" /><input type="number" id="S1R17U0" name="S1R17U0" value="0" /><input type="number" id="S1R17U1" name="S1R17U1" value="0" /><input type="number" id="S1R17U2" name="S1R17U2" value="0" /><input type="number" id="S1R17U3" name="S1R17U3" value="0" /><input type="number" id="S1R17U4" name="S1R17U4" value="0" /><input type="number" id="S1R17U5" name="S1R17U5" value="0" /></td>
+        <td><input type="number" id="S2R17F" name="S2R17F" value="0" /><input type="number" id="S2R17U0" name="S2R17U0" value="0" /><input type="number" id="S2R17U1" name="S2R17U1" value="0" /><input type="number" id="S2R17U2" name="S2R17U2" value="0" /><input type="number" id="S2R17U3" name="S2R17U3" value="0" /><input type="number" id="S2R17U4" name="S2R17U4" value="0" /><input type="number" id="S2R17U5" name="S2R17U5" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R18</td>
+        <td><input type="number" id="S0R18F" name="S0R18F" value="0" /><input type="number" id="S0R18U0" name="S0R18U0" value="0" /><input type="number" id="S0R18U1" name="S0R18U1" value="0" /><input type="number" id="S0R18U2" name="S0R18U2" value="0" /><input type="number" id="S0R18U3" name="S0R18U3" value="0" /></td>
+        <td><input type="number" id="S1R18F" name="S1R18F" value="0" /><input type="number" id="S1R18U0" name="S1R18U0" value="0" /><input type="number" id="S1R18U1" name="S1R18U1" value="0" /><input type="number" id="S1R18U2" name="S1R18U2" value="0" /><input type="number" id="S1R18U3" name="S1R18U3" value="0" /></td>
+        <td><input type="number" id="S2R18F" name="S2R18F" value="0" /><input type="number" id="S2R18U0" name="S2R18U0" value="0" /><input type="number" id="S2R18U1" name="S2R18U1" value="0" /><input type="number" id="S2R18U2" name="S2R18U2" value="0" /><input type="number" id="S2R18U3" name="S2R18U3" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R19</td>
+        <td><input type="number" id="S0R19F" name="S0R19F" value="0" /><input type="number" id="S0R19U0" name="S0R19U0" value="0" /><input type="number" id="S0R19U1" name="S0R19U1" value="0" /><input type="number" id="S0R19U2" name="S0R19U2" value="0" /><input type="number" id="S0R19U3" name="S0R19U3" value="0" /><input type="number" id="S0R19U4" name="S0R19U4" value="0" /></td>
+        <td><input type="number" id="S1R19F" name="S1R19F" value="0" /><input type="number" id="S1R19U0" name="S1R19U0" value="0" /><input type="number" id="S1R19U1" name="S1R19U1" value="0" /><input type="number" id="S1R19U2" name="S1R19U2" value="0" /><input type="number" id="S1R19U3" name="S1R19U3" value="0" /><input type="number" id="S1R19U4" name="S1R19U4" value="0" /></td>
+        <td><input type="number" id="S2R19F" name="S2R19F" value="0" /><input type="number" id="S2R19U0" name="S2R19U0" value="0" /><input type="number" id="S2R19U1" name="S2R19U1" value="0" /><input type="number" id="S2R19U2" name="S2R19U2" value="0" /><input type="number" id="S2R19U3" name="S2R19U3" value="0" /><input type="number" id="S2R19U4" name="S2R19U4" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R20</td>
+        <td><input type="number" id="S0R20F" name="S0R20F" value="0" /><input type="number" id="S0R20U0" name="S0R20U0" value="0" /></td>
+        <td><input type="number" id="S1R20F" name="S1R20F" value="0" /><input type="number" id="S1R20U0" name="S1R20U0" value="0" /></td>
+        <td><input type="number" id="S2R20F" name="S2R20F" value="0" /><input type="number" id="S2R20U0" name="S2R20U0" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R21</td>
+        <td><input type="number" id="S0R21F" name="S0R21F" value="0" /><input type="number" id="S0R21U0" name="S0R21U0" value="0" /></td>
+        <td><input type="number" id="S1R21F" name="S1R21F" value="0" /><input type="number" id="S1R21U0" name="S1R21U0" value="0" /></td>
+        <td><input type="number" id="S2R21F" name="S2R21F" value="0" /><input type="number" id="S2R21U0" name="S2R21U0" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R22</td>
+        <td><input type="number" id="S0R22F" name="S0R22F" value="0" /><input type="number" id="S0R22U0" name="S0R22U0" value="0" /><input type="number" id="S0R22U1" name="S0R22U1" value="0" /><input type="number" id="S0R22U2" name="S0R22U2" value="0" /></td>
+        <td><input type="number" id="S1R22F" name="S1R22F" value="0" /><input type="number" id="S1R22U0" name="S1R22U0" value="0" /><input type="number" id="S1R22U1" name="S1R22U1" value="0" /><input type="number" id="S1R22U2" name="S1R22U2" value="0" /></td>
+        <td><input type="number" id="S2R22F" name="S2R22F" value="0" /><input type="number" id="S2R22U0" name="S2R22U0" value="0" /><input type="number" id="S2R22U1" name="S2R22U1" value="0" /><input type="number" id="S2R22U2" name="S2R22U2" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R23</td>
+        <td><input type="number" id="S0R23F" name="S0R23F" value="0" /><input type="number" id="S0R23U0" name="S0R23U0" value="0" /><input type="number" id="S0R23U1" name="S0R23U1" value="0" /></td>
+        <td><input type="number" id="S1R23F" name="S1R23F" value="0" /><input type="number" id="S1R23U0" name="S1R23U0" value="0" /><input type="number" id="S1R23U1" name="S1R23U1" value="0" /></td>
+        <td><input type="number" id="S2R23F" name="S2R23F" value="0" /><input type="number" id="S2R23U0" name="S2R23U0" value="0" /><input type="number" id="S2R23U1" name="S2R23U1" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R24</td>
+        <td><input type="number" id="S0R24F" name="S0R24F" value="0" /></td>
+        <td><input type="number" id="S1R24F" name="S1R24F" value="0" /></td>
+        <td><input type="number" id="S2R24F" name="S2R24F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R25</td>
+        <td><input type="number" id="S0R25F" name="S0R25F" value="0" /><input type="number" id="S0R25U0" name="S0R25U0" value="0" /></td>
+        <td><input type="number" id="S1R25F" name="S1R25F" value="0" /><input type="number" id="S1R25U0" name="S1R25U0" value="0" /></td>
+        <td><input type="number" id="S2R25F" name="S2R25F" value="0" /><input type="number" id="S2R25U0" name="S2R25U0" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R26</td>
+        <td><input type="number" id="S0R26F" name="S0R26F" value="0" /><input type="number" id="S0R26U0" name="S0R26U0" value="0" /><input type="number" id="S0R26U1" name="S0R26U1" value="0" /></td>
+        <td><input type="number" id="S1R26F" name="S1R26F" value="0" /><input type="number" id="S1R26U0" name="S1R26U0" value="0" /><input type="number" id="S1R26U1" name="S1R26U1" value="0" /></td>
+        <td><input type="number" id="S2R26F" name="S2R26F" value="0" /><input type="number" id="S2R26U0" name="S2R26U0" value="0" /><input type="number" id="S2R26U1" name="S2R26U1" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R27</td>
+        <td><input type="number" id="S0R27F" name="S0R27F" value="0" /><input type="number" id="S0R27U0" name="S0R27U0" value="0" /></td>
+        <td><input type="number" id="S1R27F" name="S1R27F" value="0" /><input type="number" id="S1R27U0" name="S1R27U0" value="0" /></td>
+        <td><input type="number" id="S2R27F" name="S2R27F" value="0" /><input type="number" id="S2R27U0" name="S2R27U0" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R28</td>
+        <td><input type="number" id="S0R28F" name="S0R28F" value="0" /><input type="number" id="S0R28U0" name="S0R28U0" value="0" /></td>
+        <td><input type="number" id="S1R28F" name="S1R28F" value="0" /><input type="number" id="S1R28U0" name="S1R28U0" value="0" /></td>
+        <td><input type="number" id="S2R28F" name="S2R28F" value="0" /><input type="number" id="S2R28U0" name="S2R28U0" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R29</td>
+        <td><input type="number" id="S0R29F" name="S0R29F" value="0" /><input type="number" id="S0R29U0" name="S0R29U0" value="0" /><input type="number" id="S0R29U1" name="S0R29U1" value="0" /><input type="number" id="S0R29U2" name="S0R29U2" value="0" /><input type="number" id="S0R29U3" name="S0R29U3" value="0" /><input type="number" id="S0R29U4" name="S0R29U4" value="0" /></td>
+        <td><input type="number" id="S1R29F" name="S1R29F" value="0" /><input type="number" id="S1R29U0" name="S1R29U0" value="0" /><input type="number" id="S1R29U1" name="S1R29U1" value="0" /><input type="number" id="S1R29U2" name="S1R29U2" value="0" /><input type="number" id="S1R29U3" name="S1R29U3" value="0" /><input type="number" id="S1R29U4" name="S1R29U4" value="0" /></td>
+        <td><input type="number" id="S2R29F" name="S2R29F" value="0" /><input type="number" id="S2R29U0" name="S2R29U0" value="0" /><input type="number" id="S2R29U1" name="S2R29U1" value="0" /><input type="number" id="S2R29U2" name="S2R29U2" value="0" /><input type="number" id="S2R29U3" name="S2R29U3" value="0" /><input type="number" id="S2R29U4" name="S2R29U4" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R30</td>
+        <td><input type="number" id="S0R30F" name="S0R30F" value="0" /><input type="number" id="S0R30U0" name="S0R30U0" value="0" /><input type="number" id="S0R30U1" name="S0R30U1" value="0" /></td>
+        <td><input type="number" id="S1R30F" name="S1R30F" value="0" /><input type="number" id="S1R30U0" name="S1R30U0" value="0" /><input type="number" id="S1R30U1" name="S1R30U1" value="0" /></td>
+        <td><input type="number" id="S2R30F" name="S2R30F" value="0" /><input type="number" id="S2R30U0" name="S2R30U0" value="0" /><input type="number" id="S2R30U1" name="S2R30U1" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R31</td>
+        <td><input type="number" id="S0R31F" name="S0R31F" value="0" /><input type="number" id="S0R31U0" name="S0R31U0" value="0" /><input type="number" id="S0R31U1" name="S0R31U1" value="0" /></td>
+        <td><input type="number" id="S1R31F" name="S1R31F" value="0" /><input type="number" id="S1R31U0" name="S1R31U0" value="0" /><input type="number" id="S1R31U1" name="S1R31U1" value="0" /></td>
+        <td><input type="number" id="S2R31F" name="S2R31F" value="0" /><input type="number" id="S2R31U0" name="S2R31U0" value="0" /><input type="number" id="S2R31U1" name="S2R31U1" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R32</td>
+        <td><input type="number" id="S0R32F" name="S0R32F" value="0" /></td>
+        <td><input type="number" id="S1R32F" name="S1R32F" value="0" /></td>
+        <td><input type="number" id="S2R32F" name="S2R32F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R33</td>
+        <td><input type="number" id="S0R33F" name="S0R33F" value="0" /></td>
+        <td><input type="number" id="S1R33F" name="S1R33F" value="0" /></td>
+        <td><input type="number" id="S2R33F" name="S2R33F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R34</td>
+        <td><input type="number" id="S0R34F" name="S0R34F" value="0" /><input type="number" id="S0R34U0" name="S0R34U0" value="0" /><input type="number" id="S0R34U1" name="S0R34U1" value="0" /></td>
+        <td><input type="number" id="S1R34F" name="S1R34F" value="0" /><input type="number" id="S1R34U0" name="S1R34U0" value="0" /><input type="number" id="S1R34U1" name="S1R34U1" value="0" /></td>
+        <td><input type="number" id="S2R34F" name="S2R34F" value="0" /><input type="number" id="S2R34U0" name="S2R34U0" value="0" /><input type="number" id="S2R34U1" name="S2R34U1" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R35</td>
+        <td><input type="number" id="S0R35F" name="S0R35F" value="0" /><input type="number" id="S0R35U0" name="S0R35U0" value="0" /><input type="number" id="S0R35U1" name="S0R35U1" value="0" /></td>
+        <td><input type="number" id="S1R35F" name="S1R35F" value="0" /><input type="number" id="S1R35U0" name="S1R35U0" value="0" /><input type="number" id="S1R35U1" name="S1R35U1" value="0" /></td>
+        <td><input type="number" id="S2R35F" name="S2R35F" value="0" /><input type="number" id="S2R35U0" name="S2R35U0" value="0" /><input type="number" id="S2R35U1" name="S2R35U1" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R36</td>
+        <td><input type="number" id="S0R36F" name="S0R36F" value="0" /><input type="number" id="S0R36U0" name="S0R36U0" value="0" /><input type="number" id="S0R36U1" name="S0R36U1" value="0" /><input type="number" id="S0R36U2" name="S0R36U2" value="0" /></td>
+        <td><input type="number" id="S1R36F" name="S1R36F" value="0" /><input type="number" id="S1R36U0" name="S1R36U0" value="0" /><input type="number" id="S1R36U1" name="S1R36U1" value="0" /><input type="number" id="S1R36U2" name="S1R36U2" value="0" /></td>
+        <td><input type="number" id="S2R36F" name="S2R36F" value="0" /><input type="number" id="S2R36U0" name="S2R36U0" value="0" /><input type="number" id="S2R36U1" name="S2R36U1" value="0" /><input type="number" id="S2R36U2" name="S2R36U2" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R37</td>
+        <td><input type="number" id="S0R37F" name="S0R37F" value="0" /><input type="number" id="S0R37U0" name="S0R37U0" value="0" /></td>
+        <td><input type="number" id="S1R37F" name="S1R37F" value="0" /><input type="number" id="S1R37U0" name="S1R37U0" value="0" /></td>
+        <td><input type="number" id="S2R37F" name="S2R37F" value="0" /><input type="number" id="S2R37U0" name="S2R37U0" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R38</td>
+        <td><input type="number" id="S0R38F" name="S0R38F" value="0" /><input type="number" id="S0R38U0" name="S0R38U0" value="0" /><input type="number" id="S0R38U1" name="S0R38U1" value="0" /><input type="number" id="S0R38U2" name="S0R38U2" value="0" /></td>
+        <td><input type="number" id="S1R38F" name="S1R38F" value="0" /><input type="number" id="S1R38U0" name="S1R38U0" value="0" /><input type="number" id="S1R38U1" name="S1R38U1" value="0" /><input type="number" id="S1R38U2" name="S1R38U2" value="0" /></td>
+        <td><input type="number" id="S2R38F" name="S2R38F" value="0" /><input type="number" id="S2R38U0" name="S2R38U0" value="0" /><input type="number" id="S2R38U1" name="S2R38U1" value="0" /><input type="number" id="S2R38U2" name="S2R38U2" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R39</td>
+        <td><input type="number" id="S0R39F" name="S0R39F" value="0" /></td>
+        <td><input type="number" id="S1R39F" name="S1R39F" value="0" /></td>
+        <td><input type="number" id="S2R39F" name="S2R39F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R40</td>
+        <td><input type="number" id="S0R40F" name="S0R40F" value="0" /><input type="number" id="S0R40U0" name="S0R40U0" value="0" /></td>
+        <td><input type="number" id="S1R40F" name="S1R40F" value="0" /><input type="number" id="S1R40U0" name="S1R40U0" value="0" /></td>
+        <td><input type="number" id="S2R40F" name="S2R40F" value="0" /><input type="number" id="S2R40U0" name="S2R40U0" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R41</td>
+        <td><input type="number" id="S0R41F" name="S0R41F" value="0" /><input type="number" id="S0R41U0" name="S0R41U0" value="0" /><input type="number" id="S0R41U1" name="S0R41U1" value="0" /><input type="number" id="S0R41U2" name="S0R41U2" value="0" /><input type="number" id="S0R41U3" name="S0R41U3" value="0" /></td>
+        <td><input type="number" id="S1R41F" name="S1R41F" value="0" /><input type="number" id="S1R41U0" name="S1R41U0" value="0" /><input type="number" id="S1R41U1" name="S1R41U1" value="0" /><input type="number" id="S1R41U2" name="S1R41U2" value="0" /><input type="number" id="S1R41U3" name="S1R41U3" value="0" /></td>
+        <td><input type="number" id="S2R41F" name="S2R41F" value="0" /><input type="number" id="S2R41U0" name="S2R41U0" value="0" /><input type="number" id="S2R41U1" name="S2R41U1" value="0" /><input type="number" id="S2R41U2" name="S2R41U2" value="0" /><input type="number" id="S2R41U3" name="S2R41U3" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R42</td>
+        <td><input type="number" id="S0R42F" name="S0R42F" value="0" /><input type="number" id="S0R42U0" name="S0R42U0" value="0" /><input type="number" id="S0R42U1" name="S0R42U1" value="0" /><input type="number" id="S0R42U2" name="S0R42U2" value="0" /></td>
+        <td><input type="number" id="S1R42F" name="S1R42F" value="0" /><input type="number" id="S1R42U0" name="S1R42U0" value="0" /><input type="number" id="S1R42U1" name="S1R42U1" value="0" /><input type="number" id="S1R42U2" name="S1R42U2" value="0" /></td>
+        <td><input type="number" id="S2R42F" name="S2R42F" value="0" /><input type="number" id="S2R42U0" name="S2R42U0" value="0" /><input type="number" id="S2R42U1" name="S2R42U1" value="0" /><input type="number" id="S2R42U2" name="S2R42U2" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R43</td>
+        <td><input type="number" id="S0R43F" name="S0R43F" value="0" /></td>
+        <td><input type="number" id="S1R43F" name="S1R43F" value="0" /></td>
+        <td><input type="number" id="S2R43F" name="S2R43F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R44</td>
+        <td><input type="number" id="S0R44F" name="S0R44F" value="0" /></td>
+        <td><input type="number" id="S1R44F" name="S1R44F" value="0" /></td>
+        <td><input type="number" id="S2R44F" name="S2R44F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R45</td>
+        <td><input type="number" id="S0R45F" name="S0R45F" value="0" /><input type="number" id="S0R45U0" name="S0R45U0" value="0" /></td>
+        <td><input type="number" id="S1R45F" name="S1R45F" value="0" /><input type="number" id="S1R45U0" name="S1R45U0" value="0" /></td>
+        <td><input type="number" id="S2R45F" name="S2R45F" value="0" /><input type="number" id="S2R45U0" name="S2R45U0" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R46</td>
+        <td><input type="number" id="S0R46F" name="S0R46F" value="0" /></td>
+        <td><input type="number" id="S1R46F" name="S1R46F" value="0" /></td>
+        <td><input type="number" id="S2R46F" name="S2R46F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R47</td>
+        <td><input type="number" id="S0R47F" name="S0R47F" value="0" /><input type="number" id="S0R47U0" name="S0R47U0" value="0" /></td>
+        <td><input type="number" id="S1R47F" name="S1R47F" value="0" /><input type="number" id="S1R47U0" name="S1R47U0" value="0" /></td>
+        <td><input type="number" id="S2R47F" name="S2R47F" value="0" /><input type="number" id="S2R47U0" name="S2R47U0" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R48</td>
+        <td><input type="number" id="S0R48F" name="S0R48F" value="0" /></td>
+        <td><input type="number" id="S1R48F" name="S1R48F" value="0" /></td>
+        <td><input type="number" id="S2R48F" name="S2R48F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R49</td>
+        <td><input type="number" id="S0R49F" name="S0R49F" value="0" /></td>
+        <td><input type="number" id="S1R49F" name="S1R49F" value="0" /></td>
+        <td><input type="number" id="S2R49F" name="S2R49F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R50</td>
+        <td><input type="number" id="S0R50F" name="S0R50F" value="0" /></td>
+        <td><input type="number" id="S1R50F" name="S1R50F" value="0" /></td>
+        <td><input type="number" id="S2R50F" name="S2R50F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R51</td>
+        <td><input type="number" id="S0R51F" name="S0R51F" value="0" /></td>
+        <td><input type="number" id="S1R51F" name="S1R51F" value="0" /></td>
+        <td><input type="number" id="S2R51F" name="S2R51F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R52</td>
+        <td><input type="number" id="S0R52F" name="S0R52F" value="0" /></td>
+        <td><input type="number" id="S1R52F" name="S1R52F" value="0" /></td>
+        <td><input type="number" id="S2R52F" name="S2R52F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R53</td>
+        <td><input type="number" id="S0R53F" name="S0R53F" value="0" /></td>
+        <td><input type="number" id="S1R53F" name="S1R53F" value="0" /></td>
+        <td><input type="number" id="S2R53F" name="S2R53F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R54</td>
+        <td><input type="number" id="S0R54F" name="S0R54F" value="0" /></td>
+        <td><input type="number" id="S1R54F" name="S1R54F" value="0" /></td>
+        <td><input type="number" id="S2R54F" name="S2R54F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R55</td>
+        <td><input type="number" id="S0R55F" name="S0R55F" value="0" /></td>
+        <td><input type="number" id="S1R55F" name="S1R55F" value="0" /></td>
+        <td><input type="number" id="S2R55F" name="S2R55F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R56</td>
+        <td><input type="number" id="S0R56F" name="S0R56F" value="0" /></td>
+        <td><input type="number" id="S1R56F" name="S1R56F" value="0" /></td>
+        <td><input type="number" id="S2R56F" name="S2R56F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R57</td>
+        <td><input type="number" id="S0R57F" name="S0R57F" value="0" /></td>
+        <td><input type="number" id="S1R57F" name="S1R57F" value="0" /></td>
+        <td><input type="number" id="S2R57F" name="S2R57F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R58</td>
+        <td><input type="number" id="S0R58F" name="S0R58F" value="0" /></td>
+        <td><input type="number" id="S1R58F" name="S1R58F" value="0" /></td>
+        <td><input type="number" id="S2R58F" name="S2R58F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R59</td>
+        <td><input type="number" id="S0R59F" name="S0R59F" value="0" /></td>
+        <td><input type="number" id="S1R59F" name="S1R59F" value="0" /></td>
+        <td><input type="number" id="S2R59F" name="S2R59F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R60</td>
+        <td><input type="number" id="S0R60F" name="S0R60F" value="0" /></td>
+        <td><input type="number" id="S1R60F" name="S1R60F" value="0" /></td>
+        <td><input type="number" id="S2R60F" name="S2R60F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R61</td>
+        <td><input type="number" id="S0R61F" name="S0R61F" value="0" /></td>
+        <td><input type="number" id="S1R61F" name="S1R61F" value="0" /></td>
+        <td><input type="number" id="S2R61F" name="S2R61F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R62</td>
+        <td><input type="number" id="S0R62F" name="S0R62F" value="0" /></td>
+        <td><input type="number" id="S1R62F" name="S1R62F" value="0" /></td>
+        <td><input type="number" id="S2R62F" name="S2R62F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R63</td>
+        <td><input type="number" id="S0R63F" name="S0R63F" value="0" /></td>
+        <td><input type="number" id="S1R63F" name="S1R63F" value="0" /></td>
+        <td><input type="number" id="S2R63F" name="S2R63F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R64</td>
+        <td><input type="number" id="S0R64F" name="S0R64F" value="0" /></td>
+        <td><input type="number" id="S1R64F" name="S1R64F" value="0" /></td>
+        <td><input type="number" id="S2R64F" name="S2R64F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R65</td>
+        <td><input type="number" id="S0R65F" name="S0R65F" value="0" /></td>
+        <td><input type="number" id="S1R65F" name="S1R65F" value="0" /></td>
+        <td><input type="number" id="S2R65F" name="S2R65F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R66</td>
+        <td><input type="number" id="S0R66F" name="S0R66F" value="0" /></td>
+        <td><input type="number" id="S1R66F" name="S1R66F" value="0" /></td>
+        <td><input type="number" id="S2R66F" name="S2R66F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R67</td>
+        <td><input type="number" id="S0R67F" name="S0R67F" value="0" /></td>
+        <td><input type="number" id="S1R67F" name="S1R67F" value="0" /></td>
+        <td><input type="number" id="S2R67F" name="S2R67F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R68</td>
+        <td><input type="number" id="S0R68F" name="S0R68F" value="0" /></td>
+        <td><input type="number" id="S1R68F" name="S1R68F" value="0" /></td>
+        <td><input type="number" id="S2R68F" name="S2R68F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R69</td>
+        <td><input type="number" id="S0R69F" name="S0R69F" value="0" /></td>
+        <td><input type="number" id="S1R69F" name="S1R69F" value="0" /></td>
+        <td><input type="number" id="S2R69F" name="S2R69F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R70</td>
+        <td><input type="number" id="S0R70F" name="S0R70F" value="0" /></td>
+        <td><input type="number" id="S1R70F" name="S1R70F" value="0" /></td>
+        <td><input type="number" id="S2R70F" name="S2R70F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R71</td>
+        <td><input type="number" id="S0R71F" name="S0R71F" value="0" /></td>
+        <td><input type="number" id="S1R71F" name="S1R71F" value="0" /></td>
+        <td><input type="number" id="S2R71F" name="S2R71F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R72</td>
+        <td><input type="number" id="S0R72F" name="S0R72F" value="0" /></td>
+        <td><input type="number" id="S1R72F" name="S1R72F" value="0" /></td>
+        <td><input type="number" id="S2R72F" name="S2R72F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R73</td>
+        <td><input type="number" id="S0R73F" name="S0R73F" value="0" /></td>
+        <td><input type="number" id="S1R73F" name="S1R73F" value="0" /></td>
+        <td><input type="number" id="S2R73F" name="S2R73F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R74</td>
+        <td><input type="number" id="S0R74F" name="S0R74F" value="0" /></td>
+        <td><input type="number" id="S1R74F" name="S1R74F" value="0" /></td>
+        <td><input type="number" id="S2R74F" name="S2R74F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R75</td>
+        <td><input type="number" id="S0R75F" name="S0R75F" value="0" /></td>
+        <td><input type="number" id="S1R75F" name="S1R75F" value="0" /></td>
+        <td><input type="number" id="S2R75F" name="S2R75F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R76</td>
+        <td><input type="number" id="S0R76F" name="S0R76F" value="0" /></td>
+        <td><input type="number" id="S1R76F" name="S1R76F" value="0" /></td>
+        <td><input type="number" id="S2R76F" name="S2R76F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R77</td>
+        <td><input type="number" id="S0R77F" name="S0R77F" value="0" /></td>
+        <td><input type="number" id="S1R77F" name="S1R77F" value="0" /></td>
+        <td><input type="number" id="S2R77F" name="S2R77F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R78</td>
+        <td><input type="number" id="S0R78F" name="S0R78F" value="0" /></td>
+        <td><input type="number" id="S1R78F" name="S1R78F" value="0" /></td>
+        <td><input type="number" id="S2R78F" name="S2R78F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R79</td>
+        <td><input type="number" id="S0R79F" name="S0R79F" value="0" /></td>
+        <td><input type="number" id="S1R79F" name="S1R79F" value="0" /></td>
+        <td><input type="number" id="S2R79F" name="S2R79F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R80</td>
+        <td><input type="number" id="S0R80F" name="S0R80F" value="0" /></td>
+        <td><input type="number" id="S1R80F" name="S1R80F" value="0" /></td>
+        <td><input type="number" id="S2R80F" name="S2R80F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R81</td>
+        <td><input type="number" id="S0R81F" name="S0R81F" value="0" /></td>
+        <td><input type="number" id="S1R81F" name="S1R81F" value="0" /></td>
+        <td><input type="number" id="S2R81F" name="S2R81F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R82</td>
+        <td><input type="number" id="S0R82F" name="S0R82F" value="0" /></td>
+        <td><input type="number" id="S1R82F" name="S1R82F" value="0" /></td>
+        <td><input type="number" id="S2R82F" name="S2R82F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R83</td>
+        <td><input type="number" id="S0R83F" name="S0R83F" value="0" /></td>
+        <td><input type="number" id="S1R83F" name="S1R83F" value="0" /></td>
+        <td><input type="number" id="S2R83F" name="S2R83F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R84</td>
+        <td><input type="number" id="S0R84F" name="S0R84F" value="0" /></td>
+        <td><input type="number" id="S1R84F" name="S1R84F" value="0" /></td>
+        <td><input type="number" id="S2R84F" name="S2R84F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R85</td>
+        <td><input type="number" id="S0R85F" name="S0R85F" value="0" /></td>
+        <td><input type="number" id="S1R85F" name="S1R85F" value="0" /></td>
+        <td><input type="number" id="S2R85F" name="S2R85F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R86</td>
+        <td><input type="number" id="S0R86F" name="S0R86F" value="0" /></td>
+        <td><input type="number" id="S1R86F" name="S1R86F" value="0" /></td>
+        <td><input type="number" id="S2R86F" name="S2R86F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R87</td>
+        <td><input type="number" id="S0R87F" name="S0R87F" value="0" /></td>
+        <td><input type="number" id="S1R87F" name="S1R87F" value="0" /></td>
+        <td><input type="number" id="S2R87F" name="S2R87F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R88</td>
+        <td><input type="number" id="S0R88F" name="S0R88F" value="0" /></td>
+        <td><input type="number" id="S1R88F" name="S1R88F" value="0" /></td>
+        <td><input type="number" id="S2R88F" name="S2R88F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R89</td>
+        <td><input type="number" id="S0R89F" name="S0R89F" value="0" /></td>
+        <td><input type="number" id="S1R89F" name="S1R89F" value="0" /></td>
+        <td><input type="number" id="S2R89F" name="S2R89F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R90</td>
+        <td><input type="number" id="S0R90F" name="S0R90F" value="0" /></td>
+        <td><input type="number" id="S1R90F" name="S1R90F" value="0" /></td>
+        <td><input type="number" id="S2R90F" name="S2R90F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R91</td>
+        <td><input type="number" id="S0R91F" name="S0R91F" value="0" /></td>
+        <td><input type="number" id="S1R91F" name="S1R91F" value="0" /></td>
+        <td><input type="number" id="S2R91F" name="S2R91F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R92</td>
+        <td><input type="number" id="S0R92F" name="S0R92F" value="0" /></td>
+        <td><input type="number" id="S1R92F" name="S1R92F" value="0" /></td>
+        <td><input type="number" id="S2R92F" name="S2R92F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R93</td>
+        <td><input type="number" id="S0R93F" name="S0R93F" value="0" /></td>
+        <td><input type="number" id="S1R93F" name="S1R93F" value="0" /></td>
+        <td><input type="number" id="S2R93F" name="S2R93F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R94</td>
+        <td><input type="number" id="S0R94F" name="S0R94F" value="0" /></td>
+        <td><input type="number" id="S1R94F" name="S1R94F" value="0" /></td>
+        <td><input type="number" id="S2R94F" name="S2R94F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R95</td>
+        <td><input type="number" id="S0R95F" name="S0R95F" value="0" /></td>
+        <td><input type="number" id="S1R95F" name="S1R95F" value="0" /></td>
+        <td><input type="number" id="S2R95F" name="S2R95F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R96</td>
+        <td><input type="number" id="S0R96F" name="S0R96F" value="0" /></td>
+        <td><input type="number" id="S1R96F" name="S1R96F" value="0" /></td>
+        <td><input type="number" id="S2R96F" name="S2R96F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R97</td>
+        <td><input type="number" id="S0R97F" name="S0R97F" value="0" /></td>
+        <td><input type="number" id="S1R97F" name="S1R97F" value="0" /></td>
+        <td><input type="number" id="S2R97F" name="S2R97F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R98</td>
+        <td><input type="number" id="S0R98F" name="S0R98F" value="0" /></td>
+        <td><input type="number" id="S1R98F" name="S1R98F" value="0" /></td>
+        <td><input type="number" id="S2R98F" name="S2R98F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R99</td>
+        <td><input type="number" id="S0R99F" name="S0R99F" value="0" /></td>
+        <td><input type="number" id="S1R99F" name="S1R99F" value="0" /></td>
+        <td><input type="number" id="S2R99F" name="S2R99F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R100</td>
+        <td><input type="number" id="S0R100F" name="S0R100F" value="0" /></td>
+        <td><input type="number" id="S1R100F" name="S1R100F" value="0" /></td>
+        <td><input type="number" id="S2R100F" name="S2R100F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R101</td>
+        <td><input type="number" id="S0R101F" name="S0R101F" value="0" /></td>
+        <td><input type="number" id="S1R101F" name="S1R101F" value="0" /></td>
+        <td><input type="number" id="S2R101F" name="S2R101F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R102</td>
+        <td><input type="number" id="S0R102F" name="S0R102F" value="0" /></td>
+        <td><input type="number" id="S1R102F" name="S1R102F" value="0" /></td>
+        <td><input type="number" id="S2R102F" name="S2R102F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R103</td>
+        <td><input type="number" id="S0R103F" name="S0R103F" value="0" /></td>
+        <td><input type="number" id="S1R103F" name="S1R103F" value="0" /></td>
+        <td><input type="number" id="S2R103F" name="S2R103F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R104</td>
+        <td><input type="number" id="S0R104F" name="S0R104F" value="0" /></td>
+        <td><input type="number" id="S1R104F" name="S1R104F" value="0" /></td>
+        <td><input type="number" id="S2R104F" name="S2R104F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R105</td>
+        <td><input type="number" id="S0R105F" name="S0R105F" value="0" /></td>
+        <td><input type="number" id="S1R105F" name="S1R105F" value="0" /></td>
+        <td><input type="number" id="S2R105F" name="S2R105F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R106</td>
+        <td><input type="number" id="S0R106F" name="S0R106F" value="0" /></td>
+        <td><input type="number" id="S1R106F" name="S1R106F" value="0" /></td>
+        <td><input type="number" id="S2R106F" name="S2R106F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R107</td>
+        <td><input type="number" id="S0R107F" name="S0R107F" value="0" /></td>
+        <td><input type="number" id="S1R107F" name="S1R107F" value="0" /></td>
+        <td><input type="number" id="S2R107F" name="S2R107F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R108</td>
+        <td><input type="number" id="S0R108F" name="S0R108F" value="0" /></td>
+        <td><input type="number" id="S1R108F" name="S1R108F" value="0" /></td>
+        <td><input type="number" id="S2R108F" name="S2R108F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R109</td>
+        <td><input type="number" id="S0R109F" name="S0R109F" value="0" /></td>
+        <td><input type="number" id="S1R109F" name="S1R109F" value="0" /></td>
+        <td><input type="number" id="S2R109F" name="S2R109F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R110</td>
+        <td><input type="number" id="S0R110F" name="S0R110F" value="0" /></td>
+        <td><input type="number" id="S1R110F" name="S1R110F" value="0" /></td>
+        <td><input type="number" id="S2R110F" name="S2R110F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R111</td>
+        <td><input type="number" id="S0R111F" name="S0R111F" value="0" /></td>
+        <td><input type="number" id="S1R111F" name="S1R111F" value="0" /></td>
+        <td><input type="number" id="S2R111F" name="S2R111F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R112</td>
+        <td><input type="number" id="S0R112F" name="S0R112F" value="0" /></td>
+        <td><input type="number" id="S1R112F" name="S1R112F" value="0" /></td>
+        <td><input type="number" id="S2R112F" name="S2R112F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R113</td>
+        <td><input type="number" id="S0R113F" name="S0R113F" value="0" /></td>
+        <td><input type="number" id="S1R113F" name="S1R113F" value="0" /></td>
+        <td><input type="number" id="S2R113F" name="S2R113F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R114</td>
+        <td><input type="number" id="S0R114F" name="S0R114F" value="0" /></td>
+        <td><input type="number" id="S1R114F" name="S1R114F" value="0" /></td>
+        <td><input type="number" id="S2R114F" name="S2R114F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R115</td>
+        <td><input type="number" id="S0R115F" name="S0R115F" value="0" /></td>
+        <td><input type="number" id="S1R115F" name="S1R115F" value="0" /></td>
+        <td><input type="number" id="S2R115F" name="S2R115F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R116</td>
+        <td><input type="number" id="S0R116F" name="S0R116F" value="0" /></td>
+        <td><input type="number" id="S1R116F" name="S1R116F" value="0" /></td>
+        <td><input type="number" id="S2R116F" name="S2R116F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R117</td>
+        <td><input type="number" id="S0R117F" name="S0R117F" value="0" /></td>
+        <td><input type="number" id="S1R117F" name="S1R117F" value="0" /></td>
+        <td><input type="number" id="S2R117F" name="S2R117F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R118</td>
+        <td><input type="number" id="S0R118F" name="S0R118F" value="0" /></td>
+        <td><input type="number" id="S1R118F" name="S1R118F" value="0" /></td>
+        <td><input type="number" id="S2R118F" name="S2R118F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R119</td>
+        <td><input type="number" id="S0R119F" name="S0R119F" value="0" /></td>
+        <td><input type="number" id="S1R119F" name="S1R119F" value="0" /></td>
+        <td><input type="number" id="S2R119F" name="S2R119F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R120</td>
+        <td><input type="number" id="S0R120F" name="S0R120F" value="0" /></td>
+        <td><input type="number" id="S1R120F" name="S1R120F" value="0" /></td>
+        <td><input type="number" id="S2R120F" name="S2R120F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R121</td>
+        <td><input type="number" id="S0R121F" name="S0R121F" value="0" /></td>
+        <td><input type="number" id="S1R121F" name="S1R121F" value="0" /></td>
+        <td><input type="number" id="S2R121F" name="S2R121F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R122</td>
+        <td><input type="number" id="S0R122F" name="S0R122F" value="0" /></td>
+        <td><input type="number" id="S1R122F" name="S1R122F" value="0" /></td>
+        <td><input type="number" id="S2R122F" name="S2R122F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R123</td>
+        <td><input type="number" id="S0R123F" name="S0R123F" value="0" /></td>
+        <td><input type="number" id="S1R123F" name="S1R123F" value="0" /></td>
+        <td><input type="number" id="S2R123F" name="S2R123F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R124</td>
+        <td><input type="number" id="S0R124F" name="S0R124F" value="0" /></td>
+        <td><input type="number" id="S1R124F" name="S1R124F" value="0" /></td>
+        <td><input type="number" id="S2R124F" name="S2R124F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R125</td>
+        <td><input type="number" id="S0R125F" name="S0R125F" value="0" /></td>
+        <td><input type="number" id="S1R125F" name="S1R125F" value="0" /></td>
+        <td><input type="number" id="S2R125F" name="S2R125F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R126</td>
+        <td><input type="number" id="S0R126F" name="S0R126F" value="0" /></td>
+        <td><input type="number" id="S1R126F" name="S1R126F" value="0" /></td>
+        <td><input type="number" id="S2R126F" name="S2R126F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>R127</td>
+        <td><input type="number" id="S0R127F" name="S0R127F" value="0" /></td>
+        <td><input type="number" id="S1R127F" name="S1R127F" value="0" /></td>
+        <td><input type="number" id="S2R127F" name="S2R127F" value="0" /></td>
+    </tr>
+    <tr>
+        <td>RN</td>
+        <td><input type="number" id="S0RN" name="S0RN" value="0" /></td>
+        <td><input type="number" id="S1RN" name="S1RN" value="0" /></td>
+        <td><input type="number" id="S2RN" name="S2RN" value="0" /></td>
+    </tr>
+
+</tbody>
+</table>
+
+<h2>Settings</h2>
+
+<fieldset>
+    <legend>General</legend>
+    <table>
+    <thead>
+        <tr><th>Description</th><th>Value</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Sound Effects Volume</td><td><select id="OVF" name="OVF" size="1"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></td></tr>
+        <tr><td>Music Volume</td><td><select id="OVM" name="OVM" size="1"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></td></tr>
+        <tr><td>Visual Style</td><td><input type="checkbox" data-type="B" id="OCLA" name="OCLA" value="1" /><label for="OCLA">Use classic visual styles (unchecked: new style)</label></td></tr>
+        <tr><td>Language</td><td><select id="OLG" name="OLG" size="1"><option value="0">English</option><option value="1">Español (América Latina) (Spanish)</option><option value="2">Français (French)</option><option value="3">Italiano (Italian)</option><option value="4">Português (Portugese)</option><option value="5">Türkçe (Turkish)</option><option value="6">Русский (Russian)</option><option value="7">한국어 (Korean)</option><option value="8">中文 (Chinese)</option><option value="9">日本語 (Japanese)</option></select></td></tr>
+    </tbody>
+    </table>
+</fieldset>
+
+<fieldset>
+    <legend>Controls</legend>
+    <table>
+    <thead>
+        <tr><th>Description</th><th>Value</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Move sensitivity</td><td><select id="OCS" name="OCS" size="1"><option value="0">Low</option><option value="1">Medium</option><option value="2">High</option></select></td></tr>
+        <tr><td>Flip left/right</td><td><input type="checkbox" data-type="B" id="OCF" name="OCF" value="1" /></td></tr>
+        <tr><td>Use Gamepad</td><td><input type="checkbox" data-type="B" id="OCG" name="OCG" value="1" /></td></tr>
+        <tr><td>Position: Movement</td><td><input type="number" data-type="F" id="OCOX0" name="OCOX0" value="0" /> / <input type="number" data-type="F" id="OCOY0" name="OCOY0" value="0" /></td></tr>
+        <tr><td>Position: Switch Weapon</td><td><input type="number" data-type="F" id="OCOX1" name="OCOX1" value="0" /> / <input type="number" data-type="F" id="OCOY1" name="OCOY1" value="0" /></td></tr>
+        <tr><td>Position: Fire</td><td><input type="number" data-type="F" id="OCOX2" name="OCOX2" value="0" /> / <input type="number" data-type="F" id="OCOY2" name="OCOY2" value="0" /></td></tr>
+        <tr><td>Position: Dash</td><td><input type="number" data-type="F" id="OCOX3" name="OCOX3" value="0" /> / <input type="number" data-type="F" id="OCOY3" name="OCOY3" value="0" /></td></tr>
+    </tbody>
+    </table>
+</fieldset>
+
+<fieldset>
+    <legend>Graphics</legend>
+    <table>
+    <thead>
+        <tr><th>Description</th><th>Value</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Extras</td><td><select id="OXE" name="OXE" size="1"><option value="1">Low</option><option value="2">Medium</option><option value="3">On</option></select></td></tr>
+        <tr><td>Detail Textures</td><td><select id="OXD" name="OXD" size="1"><option value="0">Off</option><option value="1">Medium</option><option value="2">High</option></select></td></tr>
+        <tr><td>Particles</td><td><select id="OXP" name="OXP" size="1"><option value="1">Medium</option><option value="2">High</option><option value="3">Highest</option></select></td></tr>
+        <tr><td>Game Textures</td><td><select id="OXT" name="OXT" size="1"><option value="1">Medium</option><option value="2">High</option></select></td></tr>
+        <tr><td>UI Textures</td><td><select id="OXTU" name="OXTU" size="1"><option value="1">Medium</option><option value="2">High</option></select></td></tr>
+    </tbody>
+    </table>
+
+    <h3>Unknown</h3>
+    <table>
+    <thead>
+        <tr><td>Description</td><td>Value</td></tr>
+    </thead>
+    <tbody>
+        <tr><td>OIC</td><td><input type="checkbox" data-type="B" id="OIC" name="OIC" value="1" /></td></tr>
+        <tr><td>OXBM</td><td><input type="checkbox" data-type="B" id="OXBM" name="OXBM" value="1" /></td></tr>
+        <tr><td>OXBR</td><td><input type="checkbox" data-type="B" id="OXBR" name="OXBR" value="1" /></td></tr>
+        <tr><td>OXCT</td><td><input type="checkbox" data-type="B" id="OXCT" name="OXCT" value="1" /></td></tr>
+        <tr><td>OXFS</td><td><input type="checkbox" data-type="B" id="OXFS" name="OXFS" value="1" /></td></tr>
+        <tr><td>OXPX</td><td><input type="number" id="OXPX" name="OXPX" value="0" /></td></tr>
+        <tr><td>OXRC</td><td><input type="checkbox" data-type="B" id="OXRC" name="OXRC" value="1" /></td></tr>
+        <tr><td>OXRI</td><td><input type="number" id="OXRI" name="OXRI" value="0" /></td></tr>
+        <tr><td>OXVS</td><td><input type="checkbox" data-type="B" id="OXVS" name="OXVS" value="1" /></td></tr>
+    </tbody>
+    </table>
+</fieldset>
+
+</div>
+</body>
+</html>
